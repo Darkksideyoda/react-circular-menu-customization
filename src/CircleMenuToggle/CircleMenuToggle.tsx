@@ -9,6 +9,10 @@ interface Props {
   toggleMenu: () => void;
   className?: string;
   children?:ReactNode
+  borderHexColor?:string;
+  borderWidth?:number;
+  backgroundHexColor?:string;
+  textHexColor?:string;
 }
 
 export const CircleMenuToggle: FC<Props> = ({
@@ -16,7 +20,11 @@ export const CircleMenuToggle: FC<Props> = ({
   menuActive = false,
   className,
   toggleMenu,
-  children
+  children,
+  backgroundHexColor,
+  borderHexColor,
+  borderWidth,
+  textHexColor,
 }) => {
   return (
     <StyledCircleMenuToggle
@@ -24,6 +32,7 @@ export const CircleMenuToggle: FC<Props> = ({
       onClick={toggleMenu}
       menuActive={menuActive}
       size={size}
+      backgroundHexColor={backgroundHexColor} borderHexColor={borderHexColor} borderWidth={borderWidth} textHexColor={textHexColor} 
     >
       {children}
     </StyledCircleMenuToggle>

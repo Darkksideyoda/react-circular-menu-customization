@@ -5,6 +5,10 @@ interface Props {
     toggleMenu: () => void;
     className?: string;
     children?: ReactNode;
+    borderHexColor?: string;
+    borderWidth?: number;
+    backgroundHexColor?: string;
+    textHexColor?: string;
 }
 export declare const CircleMenuToggle: FC<Props>;
 export {};

@@ -42,7 +42,7 @@ export var CircleMenu = function (_a) {
             (_b = (_a = menuToggleElement.props).onClick) === null || _b === void 0 ? void 0 : _b.call(_a);
             toggleMenu();
         },
-    })) : (React.createElement(CircleMenuToggle, { className: menuToggleClassName, menuActive: menuActive, size: itemSize, toggleMenu: toggleMenu }, circleMenuToggleItem));
+    })) : (React.createElement(CircleMenuToggle, { className: menuToggleClassName, menuActive: menuActive, size: itemSize, toggleMenu: toggleMenu, backgroundHexColor: backgroundHexColor, borderHexColor: borderHexColor, borderWidth: borderWidth, textHexColor: textHexColor }, circleMenuToggleItem));
     return (React.createElement(Backdrop, { className: className, active: menuActive, onClick: toggleMenu },
         menuToggle,
         React.createElement(StyledCircleMenuData, null, Children.map(props.children, function (child, index) {

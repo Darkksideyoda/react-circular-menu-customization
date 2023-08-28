@@ -75,6 +75,7 @@ export const CircleMenu: FC<Props> = ({
       menuActive={menuActive}
       size={itemSize}
       toggleMenu={toggleMenu}
+      backgroundHexColor={backgroundHexColor} borderHexColor={borderHexColor} borderWidth={borderWidth} textHexColor={textHexColor} 
     >
       {circleMenuToggleItem}
     </CircleMenuToggle>
