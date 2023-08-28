@@ -1,16 +1,17 @@
 import styled from "styled-components";
 
 interface Props {
-  $size: number;
+  $size?: number;
+  $borderHexColor?:string;
+  $borderWidth?:number;
+  $backgroundHexColor?:string;
+  $textHexColor?:string;
 }
 
 export const StyledCircleButton = <T extends "a" | "button">(tag: T) => styled(
   tag
 )<Props>`
-  border: 0.2rem solid #000000;
-  background: #ffffff;
   text-decoration: none;
-  color: #000000;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
@@ -19,15 +20,19 @@ export const StyledCircleButton = <T extends "a" | "button">(tag: T) => styled(
   box-sizing: unset;
   padding: 0.5rem;
   transition: all 0.5s;
-  ${({ $size }) => `
+  ${({ $size,$backgroundHexColor,$borderHexColor,$borderWidth,$textHexColor }) => `
     width: ${$size}rem;
     height: ${$size}rem;
-  `}
+    border: ${$borderWidth}rem solid #${$borderHexColor};
+    background: #${$backgroundHexColor};
+    color: #${$textHexColor};
 
   &:is(:hover, :focus, :active) {
-    color: #ffffff;
-    background: #000000;
+    color: #${$backgroundHexColor};
+    background: #${$textHexColor};
   }
+  `}
+
 `;
 
 export const StyledButton = StyledCircleButton("button");

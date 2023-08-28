@@ -25,8 +25,8 @@ import { CircleButton } from "../CircleButton/CircleButton";
 import { Tooltip } from "../Tooltip/Tooltip";
 import { StyledCircleMenuItem } from "./StyledCircleMenuItem";
 export var CircleMenuItem = function (_a) {
-    var _b = _a.size, size = _b === void 0 ? 2 : _b, _c = _a.radius, radius = _c === void 0 ? 1 : _c, _d = _a.menuActive, menuActive = _d === void 0 ? false : _d, _e = _a.rotationAngle, rotationAngle = _e === void 0 ? 0 : _e, children = _a.children, tooltip = _a.tooltip, tooltipPlacement = _a.tooltipPlacement, circleButtonProps = __rest(_a, ["size", "radius", "menuActive", "rotationAngle", "children", "tooltip", "tooltipPlacement"]);
+    var _b = _a.size, size = _b === void 0 ? 2 : _b, backgroundHexColor = _a.backgroundHexColor, borderHexColor = _a.borderHexColor, borderWidth = _a.borderWidth, textHexColor = _a.textHexColor, _c = _a.radius, radius = _c === void 0 ? 1 : _c, _d = _a.menuActive, menuActive = _d === void 0 ? false : _d, _e = _a.rotationAngle, rotationAngle = _e === void 0 ? 0 : _e, children = _a.children, tooltip = _a.tooltip, tooltipPlacement = _a.tooltipPlacement, circleButtonProps = __rest(_a, ["size", "backgroundHexColor", "borderHexColor", "borderWidth", "textHexColor", "radius", "menuActive", "rotationAngle", "children", "tooltip", "tooltipPlacement"]);
     return (React.createElement(StyledCircleMenuItem, { "$radius": radius, menuActive: menuActive, rotationAngle: rotationAngle },
         React.createElement(Tooltip, { title: tooltip !== null && tooltip !== void 0 ? tooltip : "", placement: tooltipPlacement },
-            React.createElement(CircleButton, __assign({ size: size }, circleButtonProps), children))));
+            React.createElement(CircleButton, __assign({ size: size, backgroundHexColor: backgroundHexColor, borderHexColor: borderHexColor, borderWidth: borderWidth, textHexColor: textHexColor }, circleButtonProps), children))));
 };

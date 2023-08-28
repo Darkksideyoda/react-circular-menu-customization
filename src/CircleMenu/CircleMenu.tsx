@@ -28,6 +28,10 @@ interface Props {
   open?: boolean
   children: ReactNode;
   circleMenuToggleItem:ReactNode;
+  borderHexColor?:string;
+  borderWidth?:number;
+  backgroundHexColor?:string;
+  textHexColor?:string;
 }
 
 export const CircleMenu: FC<Props> = ({
@@ -39,6 +43,10 @@ export const CircleMenu: FC<Props> = ({
   menuToggleClassName,
   onMenuToggle,
   open,
+  backgroundHexColor,
+  borderHexColor,
+  borderWidth,
+  textHexColor,
   circleMenuToggleItem,
   ...props
 }) => {
@@ -90,6 +98,7 @@ export const CircleMenu: FC<Props> = ({
               key={"cm-item-" + index}
               {...(child as ReactElement<CircleMenuItemProps>).props}
               size={itemSize}
+              backgroundHexColor={backgroundHexColor} borderHexColor={borderHexColor} borderWidth={borderWidth} textHexColor={textHexColor} 
               menuActive={menuActive}
               radius={radius}
               rotationAngle={angle}

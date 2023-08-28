@@ -23,6 +23,6 @@ var __rest = (this && this.__rest) || function (s, e) {
 import React from "react";
 import { StyledButton, StyledLink } from "./StyledCircleButton";
 export var CircleButton = function (props) {
-    var link = props.link, target = props.target, tooltip = props.tooltip, tooltipPlacement = props.tooltipPlacement, onClick = props.onClick, size = props.size, commonProps = __rest(props, ["link", "target", "tooltip", "tooltipPlacement", "onClick", "size"]);
-    return link ? (React.createElement(StyledLink, __assign({}, commonProps, { "$size": size, href: link, target: target }))) : (React.createElement(StyledButton, __assign({}, commonProps, { "$size": size, onClick: onClick })));
+    var link = props.link, backgroundHexColor = props.backgroundHexColor, borderHexColor = props.borderHexColor, borderWidth = props.borderWidth, textHexColor = props.textHexColor, target = props.target, tooltip = props.tooltip, tooltipPlacement = props.tooltipPlacement, onClick = props.onClick, size = props.size, commonProps = __rest(props, ["link", "backgroundHexColor", "borderHexColor", "borderWidth", "textHexColor", "target", "tooltip", "tooltipPlacement", "onClick", "size"]);
+    return link ? (React.createElement(StyledLink, __assign({}, commonProps, { "$backgroundHexColor": backgroundHexColor, "$borderHexColor": borderHexColor, "$borderWidth": borderWidth, "$textHexColor": textHexColor, "$size": size, href: link, target: target }))) : (React.createElement(StyledButton, __assign({}, commonProps, { "$backgroundHexColor": backgroundHexColor, "$borderHexColor": borderHexColor, "$borderWidth": borderWidth, "$textHexColor": textHexColor, "$size": size, onClick: onClick })));
 };

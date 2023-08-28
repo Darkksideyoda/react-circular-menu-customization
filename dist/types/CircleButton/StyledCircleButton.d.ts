@@ -1,6 +1,10 @@
 /// <reference types="react" />
 interface Props {
-    $size: number;
+    $size?: number;
+    $borderHexColor?: string;
+    $borderWidth?: number;
+    $backgroundHexColor?: string;
+    $textHexColor?: string;
 }
 export declare const StyledCircleButton: <T extends "a" | "button">(tag: T) => import("styled-components").IStyledComponent<"web", import("styled-components/dist/types").Substitute<T extends import("styled-components/dist/types").KnownTarget ? import("react").ComponentPropsWithRef<T> : import("styled-components/dist/types").BaseObject, Props>>;
 export declare const StyledButton: import("styled-components").IStyledComponent<"web", import("styled-components/dist/types").Substitute<Omit<import("react").DetailedHTMLProps<import("react").ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>, "ref"> & {

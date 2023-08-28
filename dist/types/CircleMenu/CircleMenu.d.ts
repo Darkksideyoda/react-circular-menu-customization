@@ -12,6 +12,10 @@ interface Props {
     open?: boolean;
     children: ReactNode;
     circleMenuToggleItem: ReactNode;
+    borderHexColor?: string;
+    borderWidth?: number;
+    backgroundHexColor?: string;
+    textHexColor?: string;
 }
 export declare const CircleMenu: FC<Props>;
 export {};

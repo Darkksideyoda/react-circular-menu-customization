@@ -5,5 +5,9 @@ export interface CircleMenuItemProps extends Omit<CircleButtonProps, "size"> {
     radius?: number;
     menuActive?: boolean;
     rotationAngle?: number;
+    borderHexColor?: string;
+    borderWidth?: number;
+    backgroundHexColor?: string;
+    textHexColor?: string;
 }
 export declare const CircleMenuItem: FC<CircleMenuItemProps>;

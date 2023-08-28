@@ -8,10 +8,18 @@ export interface CircleMenuItemProps extends Omit<CircleButtonProps, "size"> {
   radius?: number;
   menuActive?: boolean;
   rotationAngle?: number;
+  borderHexColor?:string;
+  borderWidth?:number;
+  backgroundHexColor?:string;
+  textHexColor?:string;
 }
 
 export const CircleMenuItem: FC<CircleMenuItemProps> = ({
   size = 2,
+  backgroundHexColor,
+  borderHexColor,
+  borderWidth,
+  textHexColor,
   radius = 1,
   menuActive = false,
   rotationAngle = 0,
@@ -26,7 +34,7 @@ export const CircleMenuItem: FC<CircleMenuItemProps> = ({
     rotationAngle={rotationAngle}
   >
     <Tooltip title={tooltip ?? ""} placement={tooltipPlacement}>
-      <CircleButton size={size} {...circleButtonProps}>
+      <CircleButton size={size} backgroundHexColor={backgroundHexColor} borderHexColor={borderHexColor} borderWidth={borderWidth} textHexColor={textHexColor}   {...circleButtonProps}>
         {children}
       </CircleButton>
     </Tooltip>

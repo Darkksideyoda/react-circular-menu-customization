@@ -12,11 +12,19 @@ export interface CircleButtonProps {
   style?: CSSProperties;
   onClick?: (e?: MouseEvent<HTMLElement>) => void;
   children: ReactNode;
+  borderHexColor?:string;
+  borderWidth?:number;
+  backgroundHexColor?:string;
+  textHexColor?:string;
 }
 
 export const CircleButton: FC<CircleButtonProps> = (props) => {
   const {
     link,
+    backgroundHexColor,
+    borderHexColor,
+    borderWidth,
+    textHexColor,
     target,
     tooltip,
     tooltipPlacement,
@@ -26,8 +34,8 @@ export const CircleButton: FC<CircleButtonProps> = (props) => {
   } = props;
 
   return link ? (
-    <StyledLink {...commonProps} $size={size} href={link} target={target} />
+    <StyledLink {...commonProps} $backgroundHexColor={backgroundHexColor} $borderHexColor={borderHexColor} $borderWidth={borderWidth} $textHexColor={textHexColor} $size={size} href={link} target={target} />
   ) : (
-    <StyledButton {...commonProps} $size={size} onClick={onClick} />
+    <StyledButton {...commonProps} $backgroundHexColor={backgroundHexColor} $borderHexColor={borderHexColor} $borderWidth={borderWidth} $textHexColor={textHexColor}  $size={size} onClick={onClick} />
   );
 };

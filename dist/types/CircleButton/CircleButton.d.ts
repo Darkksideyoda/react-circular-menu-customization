@@ -10,5 +10,9 @@ export interface CircleButtonProps {
     style?: CSSProperties;
     onClick?: (e?: MouseEvent<HTMLElement>) => void;
     children: ReactNode;
+    borderHexColor?: string;
+    borderWidth?: number;
+    backgroundHexColor?: string;
+    textHexColor?: string;
 }
 export declare const CircleButton: FC<CircleButtonProps>;

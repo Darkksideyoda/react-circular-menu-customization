@@ -52,7 +52,7 @@ var CircleMenuItem_1 = require("../CircleMenuItem/CircleMenuItem");
 var CircleMenuToggle_1 = require("../CircleMenuToggle/CircleMenuToggle");
 var StyledCircleMenu_1 = require("./StyledCircleMenu");
 var CircleMenu = function (_a) {
-    var _b = _a.rotationAngleInclusive, rotationAngleInclusive = _b === void 0 ? true : _b, _c = _a.radius, radius = _c === void 0 ? 2 : _c, _d = _a.itemSize, itemSize = _d === void 0 ? 2 : _d, className = _a.className, menuToggleElement = _a.menuToggleElement, menuToggleClassName = _a.menuToggleClassName, onMenuToggle = _a.onMenuToggle, open = _a.open, circleMenuToggleItem = _a.circleMenuToggleItem, props = __rest(_a, ["rotationAngleInclusive", "radius", "itemSize", "className", "menuToggleElement", "menuToggleClassName", "onMenuToggle", "open", "circleMenuToggleItem"]);
+    var _b = _a.rotationAngleInclusive, rotationAngleInclusive = _b === void 0 ? true : _b, _c = _a.radius, radius = _c === void 0 ? 2 : _c, _d = _a.itemSize, itemSize = _d === void 0 ? 2 : _d, className = _a.className, menuToggleElement = _a.menuToggleElement, menuToggleClassName = _a.menuToggleClassName, onMenuToggle = _a.onMenuToggle, open = _a.open, backgroundHexColor = _a.backgroundHexColor, borderHexColor = _a.borderHexColor, borderWidth = _a.borderWidth, textHexColor = _a.textHexColor, circleMenuToggleItem = _a.circleMenuToggleItem, props = __rest(_a, ["rotationAngleInclusive", "radius", "itemSize", "className", "menuToggleElement", "menuToggleClassName", "onMenuToggle", "open", "backgroundHexColor", "borderHexColor", "borderWidth", "textHexColor", "circleMenuToggleItem"]);
     var _e = (0, react_1.useState)(open !== null && open !== void 0 ? open : false), menuActive = _e[0], setMenuActive = _e[1];
     var childrenCount = react_1.Children.count(props.children);
     var itemCount = rotationAngleInclusive ? childrenCount - 1 : childrenCount;
@@ -79,7 +79,7 @@ var CircleMenu = function (_a) {
                 increment = Math.round(props.rotationAngle / itemCount);
             }
             angle += index * increment;
-            return (react_1.default.createElement(CircleMenuItem_1.CircleMenuItem, __assign({ key: "cm-item-" + index }, child.props, { size: itemSize, menuActive: menuActive, radius: radius, rotationAngle: angle })));
+            return (react_1.default.createElement(CircleMenuItem_1.CircleMenuItem, __assign({ key: "cm-item-" + index }, child.props, { size: itemSize, backgroundHexColor: backgroundHexColor, borderHexColor: borderHexColor, borderWidth: borderWidth, textHexColor: textHexColor, menuActive: menuActive, radius: radius, rotationAngle: angle })));
         }))));
 };
 exports.CircleMenu = CircleMenu;
