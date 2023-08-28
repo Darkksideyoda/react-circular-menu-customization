@@ -27,6 +27,7 @@ interface Props {
   onMenuToggle?: (toggleState: boolean) => void;
   open?: boolean
   children: ReactNode;
+  circleMenuToggleItem:ReactNode;
 }
 
 export const CircleMenu: FC<Props> = ({
@@ -38,6 +39,7 @@ export const CircleMenu: FC<Props> = ({
   menuToggleClassName,
   onMenuToggle,
   open,
+  circleMenuToggleItem,
   ...props
 }) => {
   const [menuActive, setMenuActive] = useState<boolean>(open ?? false);
@@ -65,7 +67,9 @@ export const CircleMenu: FC<Props> = ({
       menuActive={menuActive}
       size={itemSize}
       toggleMenu={toggleMenu}
-    />
+    >
+      {circleMenuToggleItem}
+    </CircleMenuToggle>
   );
 
   return (

@@ -1,7 +1,6 @@
-import React, { FC } from "react";
+import React, { FC, ReactNode } from "react";
 import {
   StyledCircleMenuToggle,
-  StyledCircleMenuBurgerBar,
 } from "./StyledCircleMenuToggle";
 
 interface Props {
@@ -9,6 +8,7 @@ interface Props {
   menuActive: boolean;
   toggleMenu: () => void;
   className?: string;
+  children?:ReactNode
 }
 
 export const CircleMenuToggle: FC<Props> = ({
@@ -16,6 +16,7 @@ export const CircleMenuToggle: FC<Props> = ({
   menuActive = false,
   className,
   toggleMenu,
+  children
 }) => {
   return (
     <StyledCircleMenuToggle
@@ -24,9 +25,7 @@ export const CircleMenuToggle: FC<Props> = ({
       menuActive={menuActive}
       size={size}
     >
-      <StyledCircleMenuBurgerBar />
-      <StyledCircleMenuBurgerBar />
-      <StyledCircleMenuBurgerBar />
+      {children}
     </StyledCircleMenuToggle>
   );
 };
